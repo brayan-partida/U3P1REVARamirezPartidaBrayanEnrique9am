@@ -20,6 +20,10 @@ class MainActivity3 : AppCompatActivity() {
         txtNombre2.setText(extras.getString("nombre"))
         txtDomicilio2.setText(extras.getString("domicilio"))
         txtCarrera2.setText(extras.getString("carrera"))
+        txtSueldo2.setText(extras.getString("sueldo"))
+        txtAntiguedad2.setText(extras.getString("antiguedad"))
+        txtFecha2.setText(extras.getString("fecha"))
+
 
 
         btnActualizar2.setOnClickListener {
@@ -27,7 +31,10 @@ class MainActivity3 : AppCompatActivity() {
                 .update(
                     "nombre", txtNombre2.text.toString(),
                     "domicilio", txtDomicilio2.text.toString(),
-                    "carrera", txtCarrera2.text.toString()
+                    "carrera", txtCarrera2.text.toString(),
+                    "sueldo", txtSueldo2.text.toString(),
+                    "antiguedad", txtAntiguedad2.text.toString(),
+                    "fecha", txtFecha2.text.toString()
 
                 )
 

@@ -38,6 +38,24 @@
         android:hint="Sueldo"
         android:inputType="textPersonName" />
 
+
+    <EditText
+        android:id="@+id/txtAntiguedad2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Antiguedad"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtFecha2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Fecha ingreso"
+        android:inputType="textPersonName" />
+
+
     <Button
         android:id="@+id/btnActualizar2"
         android:layout_width="match_parent"

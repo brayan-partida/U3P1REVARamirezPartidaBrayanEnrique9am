@@ -20,6 +20,7 @@ class MainActivity2 : AppCompatActivity() {
         btnInsertar.setOnClickListener {
             insertar()
         }
+        alerta("Bienvenido Modifica los elementos")
 
         baseDatos.collection("evento").addSnapshotListener { querySnapshot,
                                                              firebaseFirestoreException ->
@@ -33,10 +34,12 @@ class MainActivity2 : AppCompatActivity() {
             listaId.clear()
 
             for (documento in querySnapshot!!) {
-                var cadena = "Nombre: "+documento.getString("nombre") +
+                var cadena = "Nombre: " + documento.getString("nombre") +
                         "\n Domicilio: " + documento.getString("domicilio") +
-                        "\n Carrera: " + documento.getString("carrera")+
-                        "\n Sueldo: " + documento.getString("sueldo")
+                        "\n Carrera: " + documento.getString("carrera") +
+                        "\n Sueldo: " + documento.getString("sueldo") +
+                        "\n Antiguedad: " + documento.getString("antiguedad") +
+                        "\n Fecha: " + documento.getString("fecha")
                 dataLista.add(cadena)
                 listaId.add(documento.id)
             }//todo=for
@@ -98,6 +101,9 @@ class MainActivity2 : AppCompatActivity() {
                 v.putExtra("domicilio", it.getString("domicilio"))
                 v.putExtra("carrera", it.getString("carrera"))
                 v.putExtra("sueldo", it.getString("sueldo"))
+                v.putExtra("antiguedad", it.getString("antiguedad"))
+                v.putExtra("fecha", it.getString("fecha"))
+
                 startActivity(v)
             }
             .addOnFailureListener {
@@ -113,7 +119,9 @@ class MainActivity2 : AppCompatActivity() {
             "nombre" to txtNombre.text.toString(),
             "domicilio" to txtDomicilio.text.toString(),
             "carrera" to txtCarrera.text.toString(),
-            "sueldo" to txtSueldo.text.toString()
+            "sueldo" to txtSueldo.text.toString(),
+            "antiguedad" to txtAntiguedad.text.toString(),
+            "fecha" to txtFecha.text.toString()
 
         )
         baseDatos.collection("evento").add(datosInsertar as Any).addOnSuccessListener {
@@ -130,5 +138,18 @@ class MainActivity2 : AppCompatActivity() {
         txtDomicilio.setText("")
         txtCarrera.setText("")
         txtSueldo.setText("")
+        txtFecha.setText("")
+        txtAntiguedad.setText("")
     }//todo---------------limpiar--------------------->
+
+
+    fun alerta(alerta: String) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Hola")
+        builder.setMessage(alerta)
+        builder.setPositiveButton("aceptar", null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+
+    }//todo:----------------Alerta-------------------------->
 }//todo================================clase======================================>
