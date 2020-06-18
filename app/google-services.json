@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "314755449608",
+    "firebase_url": "https://u3praticasotodas.firebaseio.com",
+    "project_id": "u3praticasotodas",
+    "storage_bucket": "u3praticasotodas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314755449608:android:65405c17ab4bb91ceee2bd",
+        "android_client_info": {
+          "package_name": "mx.edu.ittepic.u3p1revaramirezpartida"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314755449608-p3199ksiun33jfb1o64phr3ghqdu4ck0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.edu.ittepic.u3p1revaramirezpartida",
+            "certificate_hash": "42422bcf1b12b1b090d581ccc7ebc1fdef5fbdbd"
+          }
+        },
+        {
+          "client_id": "314755449608-ng7ar47idhsmgil06u4dj4hqpnch4rsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Xgo7YgrQz7URvcEYB8cPiJHZr95di2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314755449608-ng7ar47idhsmgil06u4dj4hqpnch4rsj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
